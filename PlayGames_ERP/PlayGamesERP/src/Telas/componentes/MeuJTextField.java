@@ -19,6 +19,14 @@ public class MeuJTextField extends JTextField implements MeuComponente{
         this.nome = nome;
     }
 
+    public MeuJTextField(int i, String código, boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public MeuJTextField(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override //h/ Método para compor nome ao instanciar componente
     public String getNome() {
         return nome;

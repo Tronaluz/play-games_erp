@@ -6,15 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public final class TelaPrincipal extends JFrame implements ActionListener {
+
     //h/ Instanciar gerenciador de janelas do sistema
     public static JDesktopPane jdp = new JDesktopPane();
     //h/ Atributos para composição da barra de menus
     private JMenu jmCadastros, jmLocais, jmCadProdutos,
-            jmVendas, 
+            jmVendas,
             jmProdutos,
             jmFinancas;
     //h/ Atributo para composição de itens do menu
-    private JMenuItem jmiPessoas, jmiCidades, jmiEstados, jmiPaises, jmiCadastroProdutos, jmiCategorias, 
+    private JMenuItem jmiPessoas, jmiCidades, jmiEstados, jmiPaises, jmiCadastroProdutos, jmiCategorias,
             jmiNovasVendas, jmiRelatorioVendas,
             jmiEstoque, jmiMovimentacaoProdutos,
             jmiCaixa, jmiRelatorioFinanceiro, jmiDespesas;
@@ -35,7 +36,7 @@ public final class TelaPrincipal extends JFrame implements ActionListener {
     protected JButton jbDespesas = new JButton("Cadastro Despesa");
 
     //h/ Método para Instanciar uma nova tela
-    public TelaPrincipal (String titulo) {
+    public TelaPrincipal(String titulo) {
         //h/ Intanciar tela conforme API da super classe
         super(titulo);
         //h/ Define o tamanho inicial da tela
@@ -77,13 +78,13 @@ public final class TelaPrincipal extends JFrame implements ActionListener {
         jpPainelUsuario.add(new JLabel("<html><body><h1><b><Font color=white>"
                 + "Fulano de Tal"
                 + "</font></b></h1></body></html>"));
-        
+
         //h/ Definir a tela como visivel
         setVisible(true);
     }
 
     //h/ Método para montar a barra de menus
-    private void montaMenu () {
+    private void montaMenu() {
         //h/ criar novo objeto barra de menu
         JMenuBar jmbTopo = new JMenuBar();
         //h/ Instanciar nova barra de menu
@@ -168,52 +169,56 @@ public final class TelaPrincipal extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         //h/ Verifica qual dos itens do menu esta chamando a ação
-        if ((ae.getSource() == jmiPessoas) || (ae.getSource() == jbCadastroCliFor)){
+        if ((ae.getSource() == jmiPessoas) || (ae.getSource() == jbCadastroCliFor)) {
             //h/ Instanciar tela conforme classe TelaSistema
             TelaCadastroPessoas telaCadastroPessoas = new TelaCadastroPessoas();
-            
+
         } else if ((ae.getSource() == jmiCadastroProdutos) || (ae.getSource() == jbCadastroProd)) {
             //h/ Instanciar tela de cadastro de produto conforme classe TelaSistema
             TelaCadastroProduto telaCadastroProduto = new TelaCadastroProduto(); // Verificar com professor
-            
+
+        } else if ((ae.getSource() == jmiMovimentacaoProdutos) || (ae.getSource() == jbMovimentacaoProdutos)) {
+            //h/ Instanciar tela de cadastro de produto conforme classe TelaSistema ass:Lucas
+            TelaMoviProduto TelaMoviProduto = new TelaMoviProduto();
+
         } else if (ae.getSource() == jmiCidades) {
             //h/ Instanciar tela de cadastro de cidades
-            
+
         } else if (ae.getSource() == jmiEstados) {
             //h/ Instanciar tela de cadastro de estados
-            
+
         } else if (ae.getSource() == jmiPaises) {
             //h/ Instanciar tela de cadastro de paises
-            
+
         } else if (ae.getSource() == jmiCategorias) {
             //h/ Instanciar tela para cadastro de categoria de produtos
-            
+
         } else if ((ae.getSource() == jmiNovasVendas) || (ae.getSource() == jbNovasVendas)) {
             //h/ Instanciar tela para iniciar uma nova venda
             TelaNovasVendasItens telaNovasVendasItens = new TelaNovasVendasItens();
         } else if ((ae.getSource() == jmiRelatorioVendas) || (ae.getSource() == jbRelatorioVendas)) {
             //h/ Instanciar tela para relatorio de vendas
-            
+
         } else if ((ae.getSource() == jmiEstoque) || (ae.getSource() == jbEstoque)) {
             //h/ Instanciar tela para relatório de estoque
-            
+
         } else if ((ae.getSource() == jmiMovimentacaoProdutos) || (ae.getSource() == jbMovimentacaoProdutos)) {
             //h/ Instanciar tela para entrada de produto no estoque
-            
+
         } else if ((ae.getSource() == jmiCaixa) || (ae.getSource() == jbCaixa)) {
             //h/ Instanciar tela de Caixa
-            
+
         } else if ((ae.getSource() == jmiRelatorioFinanceiro) || (ae.getSource() == jbRelatorioFinanceiro)) {
             //h/ Instanciar tela de contas a receber
-            
+
         } else if ((ae.getSource() == jmiDespesas) || (ae.getSource() == jbDespesas)) {
             //h/ Instanciar tela para cadastro de despesas
-            
+
         }
     }
 
     //h/ Método para adicionar botões ao painel lateral da tela principal
-    protected void adicionaBotoes ( JButton botao) {
+    protected void adicionaBotoes(JButton botao) {
         //h/ Instancia botões no painel lateral
         jpPainelLateral.add(botao);
         //h/ Adiciona função ao novo botão
