@@ -9,11 +9,11 @@ import java.awt.event.ActionEvent;
 public class TelaCadastroProduto extends TelaSistema {
 
     //coluna do produto
-    private MeuJTextField jtfCodigo = new MeuJTextField(20,"Código do Produto");
-    private MeuJTextField jtfValorUni = new MeuJTextField(20,"Valor Unitário");
-    private MeuJTextField jtfCategoria = new MeuJTextField(20,"Categoria");
-    private MeuJTextField jtfStatus = new MeuJTextField(20,"Status");
-    private MeuJTextField jtfNome = new MeuJTextField(20,"Nome");
+     MeuJTextField jtfCodigo = new MeuJTextField(20,"Código do Produto");
+     MeuJTextField jtfValorUni = new MeuJTextField(20,"Valor Unitário");
+     MeuJTextField jtfCategoria = new MeuJTextField(20,"Categoria");
+     MeuJTextField jtfStatus = new MeuJTextField(20,"Status");
+     MeuJTextField jtfNome = new MeuJTextField(20,"Nome");
     
     //coluna de Estoque
     private MeuJTextField jtfData = new MeuJTextField(20,"Data");
